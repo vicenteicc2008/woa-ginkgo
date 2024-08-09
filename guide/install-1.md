@@ -1,7 +1,7 @@
-<img align="right" src="https://raw.githubusercontent.com/graphiks/woa-raphael/main/media/raphael.png" width="350" alt="Windows 11 running on raphael">
+<img align="right" src="https://raw.githubusercontent.com/graphiks/woa-raphael/main/media/raphael.png" width="350" alt="Windows 11 running on ginkgo">
 
 h 2
-# Running Windows on the Mi 9T Pro / Redmi K20 Pro
+# Running Windows on the Xiaomi Redmi Note 8/8T
 
 ## Partitioning your device
 
@@ -22,7 +22,7 @@ h 2
 > 
 > Do not run the same command twice.
 > 
-> DO NOT REBOOT YOUR PHONE if you think you made a mistake, ask for help in the [Telegram chat](https://t.me/woaraphael).
+> DO NOT REBOOT YOUR PHONE if you think you made a mistake, ask for help in the [Telegram chat](https://t.me/woaginkgo).
 > 
 >
 > Do not run all commands at once, execute them in order!
@@ -47,7 +47,7 @@ Use TWRP now to back up your Modem and EFS partition (as well as anything else i
 > **IF YOU PROCEED WITHOUT BACKING UP MODEM AND EFS, YOU ARE ON YOUR OWN IF YOU MESS UP**
 
 ### Partitioning guide
-> Your Redmi K20 Pro / Mi 9T Pro may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
+> Your Xiaomi Redmi Note 8/8T may have different storage sizes. This guide uses the values of the 64GB model as an example. When relevant, the guide will mention if other values can or should be used.
 
 ##### Extending the partition limit
 ```cmd
@@ -78,7 +78,7 @@ resizepart $
 ```cmd
 End? [121GB]? 32GB
 ```
-Note: 121GB is parted telling us the maximum end value we can select.
+Note: 60GB is parted telling us the maximum end value we can select.
 
 ##### Checking free space
 ```cmd
@@ -99,11 +99,11 @@ set $ esp on
 ```
 
 ##### Creating Windows partition
-> In this example 121GB is the end value of your phone's total storage. Replace this with the actual end value you see when executing "p free"
+> In this example 58.5GB is the end value of your phone's total storage. Replace this with the actual end value you see when executing "p free"
 
 > 32.5GB in this example is the end of ESP, replace this with your actual value accordingly as well
 ```cmd
-mkpart win ntfs 32.5GB 1221B
+mkpart win ntfs 32.5GB 58.5GB
 ```
 
 ##### Exit parted
